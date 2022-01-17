@@ -16,7 +16,7 @@ process.on("SIGTERM", () => {
     const app = express();
 
     console.log("Connecting to MongoDB");
-    await mongoose.connect("mongodb://127.0.0.1:27017/tom", { useUnifiedTopology: true, useNewUrlParser: true });
+    await mongoose.connect("mongodb://mongodb:27017/tom", { useUnifiedTopology: true, useNewUrlParser: true });
     console.log("Connected");
 
     app.get('/', (req, res) => {
